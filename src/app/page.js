@@ -1,95 +1,48 @@
+import Logo from "@/components/img/WATCHME.png";
+
+import ImgHome from "@/components/img/clockmw.png";
 import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+    <main className=" bg-cover h-max ">
+
+
+      <nav className="w-full h-20 flex justify-center items-center gap-72 fixed">
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <Image src={Logo} className=" w-40 h-auto"></Image>
         </div>
-      </div>
+        <div className="flex gap-14 items-center font-Poppins font-medium">
+          <a href="#">Home</a>
+          <a href="#">Explore</a>
+          <a href="#">About</a>
+        </div>
+        <div className="w-max h-max"><button className="order flex relative justify-center font-Bebas px-5 bg-[#f3f3f3] rounded-full"><a>ORDER NOW</a></button></div>
+      </nav>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="Homee bg-hero flex  items-center h-[100vh] bg-cover bg-no-repeat ">
+      
+        <article className="w-1/2 h-full flex justify-center items-center bg-[#d9d9d927]">
+          <div className=" w-3/4 ">
+            <h1 className=" font-semibold mb-4 font-Poppins text-xl">Don’t waste time, because</h1>
+            <div className="bg-black w-max h-max mb-4 flex justify-center items-center"><h1 className="titleHome px-4 pt-2 pb-4 text-transparent text-6xl font-semibold font-Poppins">Time is Money</h1></div>
+            
+            <h1 className=" font-Montserrat font-semibold">
+              Get this elegant watch, it will not only enhance your style, but
+              also help you manage your time efficiently, ensuring you stay
+              productive and on time throughout the day.
+            </h1>
+            <div className=" w-full h-max mt-10 flex justify-start gap-10 font-semibold">
+          <span className=" w-32 h-12 justify-center items-center flex bg-[#B9C57F] font-Montserrat"><a href="#">Sign up</a></span>
+          <span className=" w-32 h-12 justify-center items-center flex border border-black font-Montserrat"><a href="#">login</a></span>
+        </div>
+          </div>
+        </article>
+        <div className="flex justify-center w-1/2 h-full items-center bg-[#d9d9d927]">
+          <Image src={ImgHome} className=" w-3/5 h-max mr-20"></Image>
+        </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
     </main>
   );
 }
